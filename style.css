@@ -1,0 +1,158 @@
+@charset "UTF-8";
+
+body {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    background-color: #191816;
+}
+
+* {
+    color: #afb6c2;
+    font-family: "Poppins";
+    font-Weight: 400, 500 e 600;
+}
+
+.logo::before {
+    content: "";
+    background-image: url(./images/favicon.ico);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    width: 25px;
+    height: 1em;
+}
+
+h2::before {
+    content: "";
+    background-image: url(./images/log-in.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    width: 25px;
+    height: 1em;
+}
+
+form {
+    background-color: #24221f;
+    padding: 30px 100px;
+    width: 50%;
+    margin: 50px auto;
+}
+
+.right {
+    background-image: url(./images/side-image.jpg);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size:contain;
+}
+
+.inside_flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+label, input {
+    display: block;
+    width: 100%;
+}
+
+label {
+    margin-top: 15px;
+}
+
+fieldset {
+    border: none;
+}
+
+input {
+    line-height: 2em;
+    background-color: #24221f;
+    border: 1px solid #afb6c2;
+    border-radius: 3px;
+}
+
+input[type="email"] {
+    background-image: url(./images/mail.svg);
+}
+
+input[type="password"] {
+    background-image: url(./images/lock.svg), url(./images/eye.svg);
+}
+
+input[type="email"], input[type="password"] {
+    box-sizing: border-box;
+    padding-left: 30px;
+    background-repeat: no-repeat;
+    background-position: 5px center, 97% center;
+}
+
+input[type="email"]:focus {
+    outline: 2px solid #ffc632;
+    background-image: url(./images/mail-focus.svg);
+}
+
+input[type="password"]:focus {
+    outline: 2px solid #ffc632;
+    background-image: url(./images/lock-focus.svg), url(./images/eye.svg);
+}
+
+input[type="checkbox"] {
+    display: inline;
+    width:auto;
+    visibility: hidden;
+}
+
+label[for="remind_me"] {
+    display: inline;
+    position: relative;
+}
+
+label[for="remind_me"]::before,
+label[for="remind_me"]::after {
+    content: "";
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    left:-20px;
+}
+
+label[for="remind_me"]::before {
+    width: 0.9em;
+    height: 0.9em;
+    border:1px solid grey;
+    border-radius: 3px;
+}
+
+label[for="remind_me"]::after {
+    background-image: url(./images/check.svg);
+    background-repeat: no-repeat;
+    background-size:contain;
+    width: 1em;
+    height: 1em;
+    opacity: 0;
+}
+
+input[type=checkbox]:checked + label[for="remind_me"]::before {
+    background-color: #ffc632;
+    }
+
+input[type=checkbox]:checked + label[for="remind_me"]::after {
+    opacity: 1; 
+    }
+    
+button {
+    width: 100%;
+    height: 2em;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    background-color: #ffc632;
+    color: black;
+}
+
+.primary, .primary b {
+    color: #ffc632;
+    text-align: center;
+}

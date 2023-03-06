@@ -1,11 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="./style.css"/>
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+
+    <section class="left">
+        <p class="logo">Camp-in</p>
+        <form action="" method="">
+          <h2>&nbsp;Login</h2>
+          <fieldset>
+            <legend>Input your information below.</legend>
+            <label for="email">Email</label>
+            <input type="email" name="email" placeholder="Type your Email"/>
+            
+            <label for="password">Password</label>
+            <input type="password" name="password"
+            placeholder="Type your password" pattern="[a-zA-Z0-9]{6,}"/>
+            <div class="inside_flex">
+              <div>
+                <input type="checkbox" id="remind_me"/>
+                <label for="remind_me">Remind me</label>
+              </div>
+              <p class="primary">Forgot my password</p>
+            </div>
+            <button type="submit">Login</button>
+            <p class="primary">Don't have an account? <b>Sign in!</b></p>
+          </fieldset>
+        </form>
+    </section>
+
+    <section class="right"></section>
+
+  </body>
 </html>
